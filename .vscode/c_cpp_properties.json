@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "RASPI",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG=1"
+            ],
+            "cStandard": "gnu99",
+            "cppStandard": "gnu++23",
+            "intelliSenseMode": "linux-gcc-arm64",
+            "compilerPath": "D:\\tools\\Arm GNU Toolchain arm-none-eabi\\13.2 Rel1\\bin\\arm-none-eabi-gcc.exe"
+        }
+    ],
+    "version": 4
+}
