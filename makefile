@@ -5,8 +5,8 @@ CC = D:/tools/Arm GNU Toolchain arm-none-eabi/13.2 Rel1/bin/arm-none-eabi-gcc# �
 
 # 2. 设置编译标识
 ifeq ($(RASPI_MODEL),1) # 指令与表达式之间要有空格
-# 树莓派model1 用的芯片与2 和3 不同
-# 注释不能有缩进
+#   树莓派model1 用的芯片与2 和3 不同
+#   注释不能有缩进
 	CPU = arm1176jzf-s  
 	DIRECTIVES = -D MODEL_1  
 else  
@@ -37,10 +37,10 @@ IMG_NAME = kernel.img
 
 
 # 5. 编译与链接  
-
 build: $(OBJECTS) $(HEADERS)  # $(OBJECTS) 是一个列表，对应着下面通配符指令
-	echo Link:  
-	echo $(OBJECTS)  
+#   echo 前面加@ 表示该条命令不会被回显
+	@echo Link:  
+	@echo $(OBJECTS)  
 	$(CC) -T linker.ld -o $(IMG_NAME) $(LFLAGS) $(OBJECTS)
 
 # 6.1. 编译kernel/%.c  
